@@ -1,0 +1,493 @@
+version: "2.0"
+
+stories:
+
+- story: recommend restaurants story 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: deny
+  - action: utter_deny
+
+- story: recommend restaurants story 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: street parking
+  - slot_was_set:
+    - feature: street parking
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: deny
+  - action: utter_deny
+
+- story: recommend restaurants story 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: kosher
+  - slot_was_set:
+    - special_diet: kosher
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: deny
+  - action: utter_deny
+
+- story: recommend restaurants story 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: american
+  - slot_was_set:
+    - cuisine: american
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: kosher
+  - slot_was_set:
+    - special_diet: kosher
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: deny
+  - action: utter_deny
+
+- story: recommend restaurants story 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: nonveg
+  - slot_was_set:
+    - special_diet: nonveg
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: deny
+  - action: utter_deny
+
+- story: recommend restaurants story 6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - meals: dinner
+  - slot_was_set:
+    - meals: dinner
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: nonveg
+  - slot_was_set:
+    - special_diet: nonveg
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: deny
+  - action: utter_deny
+
+- story: recommend restaurants story 7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: continue
+  - action: action_continue
+ 
+- story: recommend restaurants story 8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: halal
+  - slot_was_set:
+    - special_diet: halal
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: continue
+  - action: action_continue
+  
+- story: recommend restaurants story 9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - feature: private dining
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: halal
+  - slot_was_set:
+    - special_diet: halal
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: continue
+  - action: action_continue
+  
+- story: recommend restaurants story 10
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: indian
+  - slot_was_set:
+    - cuisine: indian
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: beach
+  - slot_was_set:
+    - feature: beach
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: halal
+  - slot_was_set:
+    - special_diet: halal
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - intent: continue
+  - action: action_continue
+  
+  

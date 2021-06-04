@@ -1,0 +1,225 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: cuisines
+  examples: |
+    - [Seafood](cuisine)
+    - [Gastropub](cuisine)
+    - [Contemporary](cuisine)
+    - [Polynesian](cuisine)
+    - [Grill](cuisine)
+    - [Wine Bar](cuisine)
+    - [Korean](cuisine)
+    - [Beer restaurants](cuisine)
+    - [Fujian](cuisine)
+    - [Lebanese](cuisine)
+    - [Malaysian](cuisine)
+    - [Mexican](cuisine)
+    - [Pakistani](cuisine)
+    - [International](cuisine)
+    - [Australian](cuisine)
+    - [Moroccan](cuisine)
+    - [Southern-Italian](cuisine)
+    - [Mongolian](cuisine)
+    - [Thai](cuisine)
+    - [Sicilian](cuisine)
+    - [Cajun & Creole](cuisine)
+    - [Arabic](cuisine)
+    - [Scottish](cuisine)
+    - [Turkish](cuisine)
+    - [German](cuisine)
+    - [Central European](cuisine)
+    - [Chinese](cuisine)
+    - [Singaporean](cuisine)
+    - [Afghani](cuisine)
+    - [Dining bars](cuisine)
+    - [Pub](cuisine)
+    - [Vietnamese](cuisine)
+    - [Soups](cuisine)
+    - [Indian](cuisine)
+    - [European](cuisine)
+    - [Mediterranean](cuisine)
+    - [Middle Eastern](cuisine)
+    - [Sri Lankan](cuisine)
+    - [Cuban](cuisine)
+    - [Irish](cuisine)
+    - [Southwestern](cuisine)
+    - [Fast Food](cuisine)
+    - [Japanese Fusion](cuisine)
+    - [American](cuisine)
+    - [Diner](cuisine)
+    - [Spanish](cuisine)
+    - [Portuguese](cuisine)
+    - [Barbecue](cuisine)
+    - [Sushi](cuisine)
+    - [African](cuisine)
+    - [Fusion](cuisine)
+    - [Deli](cuisine)
+    - [Healthy](cuisine)
+    - [Indonesian](cuisine)
+    - [Latin](cuisine)
+    - [Caribbean](cuisine)
+    - [Steakhouse](cuisine)
+    - [Asian](cuisine)
+    - [British](cuisine)
+    - [Street Food](cuisine)
+    - [Japanese](cuisine)
+    - [Italian](cuisine)
+    - [Pizza](cuisine)
+    - [Bar](cuisine)
+    - [Cafe](cuisine)
+    - [Central-Italian](cuisine)
+    - [French](cuisine)
+    - [chinese](cuisine)
+    - [american](cuisine)
+    - [indian](cuisine)
+    - [chinese](cuisine)
+- intent: special_diets
+  examples: |
+    - [Gluten Free Options](special_diet)
+    - [Halal](special_diet)
+    - [Vegetarian Friendly](special_diet)
+    - [Vegan Options](special_diet)
+    - [Kosher](special_diet)
+    - [Nonveg](special_diet)
+    - [kosher](special_diet)
+    - [nonveg](special_diet)
+    - [halal](special_diet)
+    - [halal](special_diet)
+    - [nonveg](special_diet)
+- intent: unique_meals
+  examples: |
+    - [Lunch](meals)
+    - [Breakfast](meals)
+    - [Drinks](meals)
+    - [Dinner](meals)
+    - [Late Night](meals)
+    - [dinner](meals)
+    - [lunch](meals)
+    - [dinner](meals)
+    - [lunch](meals)
+- intent: unique_features
+  examples: |
+    - [Wine and Beer](feature)
+    - [Serves Alcohol](feature)
+    - [Beach](feature)
+    - [Delivery](feature)
+    - [Highchairs Available](feature)
+    - [Parking Available](feature)
+    - [Cash Only](feature)
+    - [Family style](feature)
+    - [Non-smoking restaurants](feature)
+    - [Full Bar](feature)
+    - [Television](feature)
+    - [Waterfront](feature)
+    - [Accepts Mastercard](feature)
+    - [Street Parking](feature)
+    - [Outdoor Seating](feature)
+    - [Private Dining](feature)
+    - [Accepts Visa](feature)
+    - [Jazz Bar](feature)
+    - [BYOB](feature)
+    - [Seating](feature)
+    - [Accepts American Express](feature)
+    - [Reservations](feature)
+    - [Dog Friendly](feature)
+    - [Accepts Discover](feature)
+    - [Digital Payments](feature)
+    - [Wheelchair Accessible](feature)
+    - [Free Wifi](feature)
+    - [Validated Parking](feature)
+    - [Takeout](feature)
+    - [Free off-street parking](feature)
+    - [Valet Parking](feature)
+    - [Accepts Credit Cards](feature)
+    - [Table Service](feature)
+    - [Gift Cards Available](feature)
+    - [Buffet](feature)
+    - [Live Music](feature)
+    - [outdoor seating](feature)
+    - [street parking](feature)
+    - [private dining](feature)
+    - [beach](feature)
+    - [private dining](feature)
+- intent: restaurant_search
+  examples: |
+    - I'm looking for a place to eat
+    - I want to grab [lunch](meals)
+    - I am searching for a [dinner](meals) spot
+    - Show me [chinese](cuisine) restaurants
+    - Show me [mexican](cuisine) restaurants
+    - Show me [indian](cuisine) restaurants
+    - Show me [thai](cuisine) restaurants
+    - Search for restaurants
+    - I am looking for [indian](cuisine) food
+    - I want to grab [dinner](meals)
+    - I want to grab [breakfast](meals)
+    - I am looking for [mexican](cuisine) food
+    - [indian](cuisine) restaurants
+    - [chinese](cuisine) restaurants
+    - i want to have some [spanish](cuisine) food today
+    - i want to have some [african] food today
+    - search restaurants
+    - show me the [chinese](cuisine) restaurants
+    - search the restaurants
+    - show me restaurants
+    - search the [chinese](cuisine) restaurants
+    - search search the restaurants
+- intent: budget
+  examples: |
+    - [Cheap](budget)
+    - [Moderate](budget)
+    - [Expensive](budget)
+    - [expensive](budget)
+    - [cheap](budget)
+    - [cheap](budget)
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thank you bye
+    - thanks bye
+    - thanks
+    - thank you
+- intent: continue
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yah
+    - yes please
+    - yah please
+    - sure
+- intent: deny
+  examples: |
+    - no,thanks
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way, thanks.
+    - not really,thanks
+    - no thanks

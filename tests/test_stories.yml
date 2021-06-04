@@ -1,0 +1,115 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: recommeded restaurants story 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+     show me restaurants
+    intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - budget: expensive
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - feature: outdoor seating
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - special_diet: Halal
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - meals: dinner
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - user: |
+     yes
+    intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - user: |
+     no,thanks
+    intent: continue
+  - action: utter_deny
+  
+- story: recommeded restaurants story 2
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+     search for restaurants
+    intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - budget: cheap
+  - slot_was_set:
+    - requested_slot: cuisine
+  - slot_was_set:
+    - cuisine: spanish
+  - slot_was_set:
+    - cuisine: spanish
+  - slot_was_set:
+    - requested_slot: feature
+  - slot_was_set:
+    - feature: take out
+  - slot_was_set:
+    - feature: take out 
+  - slot_was_set:
+    - requested_slot: special_diet
+  - slot_was_set:
+    - special_diet: non veg
+  - slot_was_set:
+    - special_diet: non veg
+  - slot_was_set:
+    - requested_slot: meals
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - meals: lunch
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - user: |
+     yes
+    intent: continue
+  - action: action_RecommendRestaurants
+  - action: utter_continue_conversation
+  - user: |
+     no,thanks
+    intent: continue
+  - action: utter_deny

@@ -1,0 +1,32 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Activate form
+  steps:
+  - intent: restaurant_search
+  - action: restaurant_form
+  - active_loop: restaurant_form
+
+- rule: Submit form or deactivate form 
+  condition:
+  # Condition that form is active.
+  - active_loop: restaurant_form
+  steps:
+  # Form is deactivated
+  - action: restaurant_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit
+  - action: utter_slot_values
+
+
+
+
+  

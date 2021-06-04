@@ -1,0 +1,179 @@
+version: "2.0"
+nlu:
+- intent: budget
+  examples: |
+    - [Expensive](budget)
+    - [cheap](budget)
+    - [expensive](budget)
+    - [Moderate](budget)
+- intent: unique_meals
+  examples: |
+    - [Drinks](meals)
+    - [Dinner](meals)
+    - [dinner](meals)
+    - [Lunch](meals)
+    - [Brunch](meals)
+    - [Breakfast](meals)
+- intent: deny
+  examples: |
+    - no thanks
+    - not really,thanks
+    - no,thanks
+    - n
+    - never
+    - don't like that
+- intent: special_diets
+  examples: |
+    - [Kosher](special_diet)
+    - [Halal](special_diet)
+    - [halal](special_diet)
+    - [Gluten Free Options](special_diet)
+    - [Vegan Options](special_diet)
+    - [Vegetarian Friendly](special_diet)
+    - [nonveg](special_diet)
+    - [kosher](special_diet)
+- intent: continue
+  examples: |
+    - that sounds good
+    - yah please
+    - of course
+    - y
+    - yah
+    - indeed
+    - yes
+    - correct
+- intent: greet
+  examples: |
+    - let's go
+    - goodmorning
+    - goodevening
+    - good evening
+    - good afternoon
+    - hello there
+    - hey
+    - hi
+    - good morning
+- intent: goodbye
+  examples: |
+    - thanks
+    - bye
+    - goodbye
+    - thank you
+    - have a nice day
+    - good by
+    - see you around
+    - see you later
+    - thanks bye
+    - bye bye
+    - thank you bye
+- intent: restaurant_search
+  examples: |
+    - I want to grab [breakfast](meals)
+    - show me restaurants
+    - search search the restaurants
+    - Show me [chinese](cuisine) restaurants
+    - I am searching for a [dinner](meals) spot
+    - Show me [indian](cuisine) restaurants
+    - [chinese](cuisine) restaurants
+    - search the [chinese](cuisine) restaurants
+    - search restaurants
+    - Search for restaurants
+    - i want to have some [african] food today
+    - [indian](cuisine) restaurants
+    - show me the [chinese](cuisine) restaurants
+    - I want to grab [lunch](meals)
+    - Show me [mexican](cuisine) restaurants
+    - I am looking for [indian](cuisine) food
+    - I want to grab [dinner](meals)
+- intent: unique_features
+  examples: |
+    - [Jazz Bar](feature)
+    - [BYOB](feature)
+    - [Buffet](feature)
+    - [Waterfront](feature)
+    - [Full Bar](feature)
+    - [Beach](feature)
+    - [Free Wifi](feature)
+    - [Reservations](feature)
+    - [Serves Alcohol](feature)
+    - [outdoor seating](feature)
+    - [Takeout](feature)
+    - [Accepts American Express](feature)
+    - [beach](feature)
+    - [Highchairs Available](feature)
+    - [Non-smoking restaurants](feature)
+    - [Street Parking](feature)
+    - [Free off-street parking](feature)
+    - [Wine and Beer](feature)
+    - [Accepts Discover](feature)
+    - [street parking](feature)
+    - [Gift Cards Available](feature)
+    - [Television](feature)
+    - [Family style](feature)
+    - [Outdoor Seating](feature)
+    - [Seating](feature)
+    - [Cash Only](feature)
+    - [Private Dining](feature)
+    - [Dog Friendly](feature)
+    - [Accepts Credit Cards](feature)
+    - [Accepts Visa](feature)
+    - [Live Music](feature)
+    - [Accepts Mastercard](feature)
+- intent: cuisines
+  examples: |
+    - [american](cuisine)
+    - [Sri Lankan](cuisine)
+    - [Scottish](cuisine)
+    - [Fusion](cuisine)
+    - [Malaysian](cuisine)
+    - [Spanish](cuisine)
+    - [Fast Food](cuisine)
+    - [Grill](cuisine)
+    - [Irish](cuisine)
+    - [Central-Italian](cuisine)
+    - [Polynesian](cuisine)
+    - [Cuban](cuisine)
+    - [Steakhouse](cuisine)
+    - [Street Food](cuisine)
+    - [Pakistani](cuisine)
+    - [Japanese Fusion](cuisine)
+    - [Deli](cuisine)
+    - [Japanese](cuisine)
+    - [chinese](cuisine)
+    - [Wine Bar](cuisine)
+    - [Mediterranean](cuisine)
+    - [Portuguese](cuisine)
+    - [Singaporean](cuisine)
+    - [Southwestern](cuisine)
+    - [Moroccan](cuisine)
+    - [Central European](cuisine)
+    - [Soups](cuisine)
+    - [Indian](cuisine)
+    - [American](cuisine)
+    - [Gastropub](cuisine)
+    - [Caribbean](cuisine)
+    - [Lebanese](cuisine)
+    - [Sushi](cuisine)
+    - [Afghani](cuisine)
+    - [Arabic](cuisine)
+    - [Mexican](cuisine)
+    - [Cafe](cuisine)
+    - [Australian](cuisine)
+    - [Diner](cuisine)
+    - [European](cuisine)
+    - [Latin](cuisine)
+    - [Vietnamese](cuisine)
+    - [African](cuisine)
+    - [indian](cuisine)
+    - [Chinese](cuisine)
+    - [Bar](cuisine)
+    - [Turkish](cuisine)
+    - [Beer restaurants](cuisine)
+    - [Healthy](cuisine)
+    - [Sicilian](cuisine)
+    - [British](cuisine)
+    - [German](cuisine)
+    - [Fujian](cuisine)
+    - [Indonesian](cuisine)
+    - [Pizza](cuisine)
+    - [Middle Eastern](cuisine)

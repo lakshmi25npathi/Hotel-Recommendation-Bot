@@ -1,0 +1,44 @@
+[
+  {
+    "text": "Beer restaurants",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "Beer restaurants",
+        "entity": "cuisine"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "cuisine",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.5033657550811768,
+        "value": "Beer",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Non-smoking restaurants",
+    "entities": [
+      {
+        "start": 0,
+        "end": 23,
+        "value": "Non-smoking restaurants",
+        "entity": "feature"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "feature",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.6692878007888794,
+        "value": "Non-smoking",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

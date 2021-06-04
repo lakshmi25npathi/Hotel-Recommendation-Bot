@@ -1,0 +1,180 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: []
+- goodbye:
+    use_entities: []
+- deny:
+    use_entities: []
+- continue:
+    use_entities: []
+- cuisines:
+    use_entities: true
+- unique_features:
+    use_entities: true
+- unique_meals:
+    use_entities: true
+- special_diets:
+    use_entities: true
+- restaurant_search:
+    use_entities: true
+- budget:
+    use_entities: true
+entities:
+- cuisine
+- special_diet
+- meals
+- feature
+- budget
+slots:
+  cuisine:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  special_diet:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  meals:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  feature:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  budget:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hello!, I'm your Restaurant Bot. How can I help you?
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: ok,let's try this again. How can I help you today?
+  utter_default:
+  - text: I'm sorry, I didn't quite understand that. Could you try again?
+  - text: I didn't get that. What can I do for you?
+  utter_ask_budget:
+  - buttons:
+    - payload: /budget{{"budget":"cheap"}}
+      title: Budget less than LKR 5000
+    - payload: /budget{{"budget":"moderate"}}
+      title: Budget between LKR 5000 & LKR 50000
+    - payload: /budget{{"budget":"expensive"}}
+      title: Budget greater than LKR 50000
+    text: Would you like dining at,
+  utter_ask_cuisine:
+  - text: Would you like to try unique cuisines like chinese, american, indian, spanish etc?
+  utter_ask_feature:
+  - buttons:
+    - payload: /unique_features{{"feature":"Outdoor Seating"}}
+      title: Outdoor Seating
+    - payload: /unique_features{{"feature":"Street Parking"}}
+      title: Street Parking
+    - payload: /unique_features{{"feature":"Wine and Beer"}}
+      title: Wine and Beer
+    - payload: /unique_features{{"feature":"Free Wifi"}}
+      title: Free Wifi
+    - payload: /unique_features{{"feature":"Private Dining"}}
+      title: Private Dining
+    - payload: /unique_features{{"feature":"Non-smoking restaurants"}}
+      title: Non-smoking restaurants
+    - payload: /unique_features{{"feature":"Dog Friendly"}}
+      title: Dog Friendly
+    text: Would you like to try any specific feature like,
+  utter_ask_special_diet:
+  - buttons:
+    - payload: /special_diets{{"special_diet":"Vegetarian Friendly"}}
+      title: Vegetarian Friendly
+    - payload: /special_diets{{"special_diet":"Halal"}}
+      title: Halal
+    - payload: /special_diets{{"special_diet":"Gluten Free Options"}}
+      title: Gluten Free Options
+    - payload: /special_diets{{"special_diet":"Kosher"}}
+      title: Kosher
+    - payload: /special_diets{{"special_diet":"Nonveg"}}
+      title: Nonveg
+    text: Would you like to try special diets like,
+  utter_ask_meals:
+  - buttons:
+    - payload: /unique_meals{{"meals":"Breakfast"}}
+      title: Breakfast
+    - payload: /unique_meals{{"meals":"Lunch"}}
+      title: Lunch
+    - payload: /unique_meals{{"meals":"Dinner"}}
+      title: Dinner
+    - payload: /unique_meals{{"meals":"Late Night"}}
+      title: Late Night
+    - payload: /unique_meals{{"meals":"Drinks"}}
+      title: Drinks
+    text: Would you like to try unique meals like,
+  utter_submit:
+  - text: ok,thanks.
+  utter_slot_values:
+  - text: |-
+      I would like to recommend restaurants based on your preferences:
+        - budget: {budget}
+        - cuisine: {cuisine}
+        - feature: {feature}
+        - special_diet: {special_diet}
+        - unique_meals : {meals}
+      Do you want me to proceed?
+  utter_continue_conversation:
+  - text: Do you need anything else?
+  utter_continue:
+  - text: How can I help you?
+  utter_deny:
+  - text: Thanks for visiting
+  utter_goodbye:
+  - text: goodbye
+actions:
+- utter_greet
+- utter_please_rephrase
+- utter_default
+- utter_ask_budget
+- utter_ask_cuisine
+- utter_ask_feature
+- utter_ask_special_diet
+- utter_ask_meals
+- utter_submit
+- utter_continue
+- utter_continue_conversation
+- utter_deny
+- utter_goodbye
+- action_RecommendRestaurants
+- action_continue
+forms:
+  restaurant_form:
+    budget:
+    - entity: budget
+      type: from_entity
+    cuisine:
+    - entity: cuisine
+      type: from_entity
+    feature:
+    - entity: feature
+      type: from_entity
+    meals:
+    - entity: meals
+      type: from_entity
+    special_diet:
+    - entity: special_diet
+      type: from_entity
+e2e_actions: []

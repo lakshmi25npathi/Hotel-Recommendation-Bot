@@ -1,0 +1,62 @@
+version: "2.0"
+nlu:
+- intent: budget
+  examples: |
+    - [Cheap](budget)
+- intent: unique_meals
+  examples: |
+    - [Late Night](meals)
+    - [lunch](meals)
+- intent: deny
+  examples: |
+    - no way, thanks.
+    - I don't think so
+- intent: special_diets
+  examples: |
+    - [Nonveg](special_diet)
+- intent: continue
+  examples: |
+    - yes please
+    - sure
+- intent: greet
+  examples: |
+    - hey dude
+    - hey there
+    - hello
+- intent: goodbye
+  examples: |
+    - cu
+    - cee you later
+- intent: restaurant_search
+  examples: |
+    - I am looking for [mexican](cuisine) food
+    - search the restaurants
+    - Show me [thai](cuisine) restaurants
+    - I'm looking for a place to eat
+    - i want to have some [spanish](cuisine) food today
+- intent: unique_features
+  examples: |
+    - [Parking Available](feature)
+    - [Table Service](feature)
+    - [Delivery](feature)
+    - [Valet Parking](feature)
+    - [private dining](feature)
+    - [Wheelchair Accessible](feature)
+    - [Digital Payments](feature)
+    - [Validated Parking](feature)
+- intent: cuisines
+  examples: |
+    - [Korean](cuisine)
+    - [Dining bars](cuisine)
+    - [Seafood](cuisine)
+    - [Barbecue](cuisine)
+    - [Cajun & Creole](cuisine)
+    - [Thai](cuisine)
+    - [International](cuisine)
+    - [Southern-Italian](cuisine)
+    - [Mongolian](cuisine)
+    - [Italian](cuisine)
+    - [Pub](cuisine)
+    - [Asian](cuisine)
+    - [French](cuisine)
+    - [Contemporary](cuisine)
